@@ -43,4 +43,18 @@
     echo date('m-d-Y h:i:sa', $timestamp4);
     echo "<br>";
     echo date('m-d-Y h:i:sa', $timestamp5);
+    echo "<br>";
+
+    // Creating a new date object by passing a specific date as an argument
+    $date = new DateTime('2018-03-15');
+    echo $date->format('d/m/Y'); // prints 15/03/2018
+    echo "<br>";
+    // Adjusting the date using modify function
+    $date->modify('-2 Days');
+    echo $date->format('d/m/Y'); // prints 13/03/2018
+    echo "<br>";
+
+    $date->modify('-2 days');
+    echo $date->format('d/m/Y'); // prints 11/03/2018
+    echo "<br>";
 ?>

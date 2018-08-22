@@ -12,12 +12,14 @@
 			} else {
 				// AJAX request
 				var xmlhttp = new XMLHttpRequest();
+				xmlhttp.open('GET', 'suggest.php?q='+str, true);
+
 				xmlhttp.onreadystatechange = function(){
 					if(this.readyState == 4 && this.status == 200){
 						document.getElementById('output').innerHTML = this.responseText;
 					}
 				}
-				xmlhttp.open('GET', 'suggest.php?q='+str, true);
+
 				xmlhttp.send();
 			}
 		}
