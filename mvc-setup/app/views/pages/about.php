@@ -1,3 +1,7 @@
-<?php require APPROOT . '/views/inc/header.php'; ?>
-<h1><?php echo $data['title']; ?></h1>
+<?php
+	$title = $data['title'];
+	require APPROOT . '/views/inc/header.php';
+?>
+	<h1>About Us</h1>
+
 <?php require APPROOT . '/views/inc/footer.php'; ?>
